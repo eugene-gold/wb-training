@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>God Hate Us All</title>
+</head>
+<body>
+    <div class="page">
+
+    <nav class="navbar">
+
+        <div class="nav_logo">
+            <div class="logo_menu">
+                <img src="./assets/menu_main.svg" alt="logo">
+            </div>
+            <p class="logo_name">товары и точка</p>
+        </div> 
+        
+        <div class="nav__search">            
+            <input class="search_input" placeholder="Я ищу...">
+            <button class="search_button">
+                <img src="./assets/search.svg">
+            </button>
+        </div>
+
+        <div class="nav_icon">
+            <div class="icon">
+                <img src="./assets/profile.svg">
+            </div>
+            <span class="icon_name">Профиль</span>
+        </div>
+
+        <div class="nav_icon">
+            <div class="icon">
+                <img src="./assets/cart.svg">
+            </div>
+            <span class="quantity_badge">3</span>
+            <span class="icon_name">Корзина</span>
+        </div>      
+
+    </nav>
+
+    <main class="cart_main">        
+        
+            
+            <section class="cart_items_wrapper">
+
+                <h1>Корзина</h1>
+
+                <div class="cart_header">
+
+                    <div class="check">
+                        <label  class="check_all">
+                            <input type="checkbox" class="check_input main_check">
+                            <span class="check_box"></span>
+                            Выбрать все
+                        </label>
+                    </div>
+
+                    <div class="hidden_items hidden">
+                        <p class="collapse_info"><span>266 товаров </span>	&middot <span> 2 100 569 сом</span></p>
+                    </div>
+
+                    <div class="hide_button" >
+                        <img src="./assets/up_button.svg" >
+                    </div>
+                </div>
+
+                <article class="items_container">                   
+
+                </article>
+
+
+                <div class="cart_header no_stock_margin">
+                    <div class="check_all">
+                        <p class="no_stock_header">Отсутствуют 	&middot <span> 3 </span> товара</p>
+                    </div>
+                    <div class="hide_button" >
+                        <img src="./assets/up_button.svg" >
+                    </div>
+                </div>
+
+                <article class="items_container no_stock">          
+                </article>
+
+                <article class="cart_widget_wrapper first_widget">
+                
+                    <div class="widget_header">
+                        <h2>Способ доставки</h2>
+                        <span class="widget_button edit_address">Изменить</span>
+                    </div>
+
+                    <div class="delivery_place">
+                        <h3 class="place">Пункт выдачи</h3>
+                        <div class="adress_wrapper">
+                            <span  class="delivery_adress" >Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
+                            <div class="delivery_rate">
+                                <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.69769 1.14922C6.43817 0.528396 5.56198 0.528387 5.30244 1.14919L6.69769 1.14922ZM5.30244 1.14919L4.14719 3.90977L1.19202 4.16613C0.519264 4.22467 0.262282 5.05966 0.759713 5.49464L3.00514 7.45915L2.33207 10.3824C2.18436 11.0238 2.87792 11.5567 3.46133 11.2023L6.00032 9.65611L8.53797 11.2015C9.12269 11.5588 9.81568 11.0227 9.66861 10.3826L8.99549 7.45915L11.2402 5.49537C11.7385 5.05961 11.4793 4.22519 10.8083 4.16667L7.85294 3.91029L6.69769 1.14922"/>
+                                </svg>
+                                <span class="rate">4.99</span>
+                                <span class="delivery_time">Ежедневно с 10 до 21 </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="delivery_place">
+                        <h3 class="place">Стоимость доставки</h3>
+                        <div class="adress_wrapper">
+                            <span  class="delivery_adress" >Бесплатно</span>                        
+                        </div>
+                    </div>
+
+                    <div class="delivery_data">                        
+                       
+                    </div>
+
+                    
+
+                    <div class="return_info">
+                        <div class="return_info_pic"></div>
+                        <p class="return_text">Обратная доставка товаров на склад при отказе — 
+                            <span class="tooltip">
+                            бесплатно
+                            <span class="tooltip_text">
+                                Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно
+                            </span>
+                        </span></p>
+                    </div>
+
+
+                </article>
+
+
+                <article class="cart_widget_wrapper">
+                    
+                    <div class="widget_header">
+                        <h2>Способ оплаты</h2>
+                        <span class="widget_button edit_card">Изменить</span>
+                    </div>                
+
+                    <div class="payment_info">
+                        <div class="card_number_wrapper">
+                            <div class="card_pic mir"></div>
+                            <p class="card_number">1234 56•• •••• 1234  <span>01/30</span></p>
+                        </div>
+                        <p class="card_info">Спишем оплату с карты при получении</p>
+                    </div>
+                </article>
+
+                <article class="cart_widget_wrapper">
+                    
+                    <div class="widget_header">
+                        <h2>Получатель</h2>
+                    </div>  
+                    
+                    <form class="user_data_form" >
+
+                        <div class="form_name">
+
+                            <label class="fname_label">
+                                <span class="inner_text"></span>
+                                <input type="text" class="fname" name="fname" placeholder="Имя">
+                            </label>
+                            <label class="lname_label">
+                                <span class="inner_text"></span>
+                                <input type="text" class="lname" name="lname" placeholder="Фамилия">                   
+                            </label>
+                        </div>
+
+                        <div class="form_contact">
+
+                            <label class="email_label">
+                                <span class="inner_text"></span>                                
+                                <input type="email" class="email" name="email" placeholder="Почта">
+                            </label>
+
+                            <label class="phone_label">
+                                <span class="inner_text"></span> 
+                                <input type="tel" class="phone" maxlength="30" name="phone" data-phone-pattern= '+7 ___ ___-__-__' placeholder="Телефон" title="Формат: +9 999 999 99 99">
+                            </label>
+
+                            <label class="inn_label">
+                                <span class="inner_text">Для таможенного оформления</span>
+                                <input type="text" class="inn" name="inn" maxlength="14" placeholder="ИНН" onkeypress='validate(event)'>
+                            </label>
+
+                            
+                        </div>
+                        
+
+
+                        
+                    </form>
+                
+                </article> 
+            </section>
+
+            <aside class="side_panel">
+                <div class="cart_widget_wrapper aside_info">
+                    
+                    <div class="widget_header aside_text">
+                        <h2>Итого</h2>
+                        <p><span class="total_sum">2 101 063 </span><span class="currency_header"> сом</span></p>
+                    </div>                
+    
+                    <div class="cart_total_info">
+                        <div class="count_name">
+                            <p><span class="total_goods">203</span><span> товара</span></p>                        
+                            <p>Скидка</p> 
+                            <p>Доставка</p> 
+                        </div>
+                        <div class="total_count">
+                            <p><span class="full_price">2 302 048</span><span class="currency"> сом</span></p>                        
+                            <p>- <span class="full_discount">200 985</span><span class="currency"> сом</span></p>
+                            <p>Бесплатно</p>
+                        </div>                                           
+                    </div>
+
+                    
+
+                    <div class="aside_container">
+                        <div class="aside_container_header">
+                            <h3>Доставка в пункт выдачи</h3>
+                                <svg class="edit_address" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1585 1.05991L14.9401 4.84154L4.72705 15.0546L0.735435 15.8529C0.385575 15.9229 0.0771149 15.6144 0.147087 15.2646L0.94541 11.273L11.1585 1.05991ZM2.17707 11.9321L11.1585 2.95072L13.0493 4.84154L4.06789 13.8229L1.70436 14.2956L2.17707 11.9321Z"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9948 5.78715L10.2132 2.00552L11.6313 0.587402C12.4145 -0.195801 13.6843 -0.195801 14.4675 0.587402L15.4129 1.53281C16.1961 2.31601 16.1961 3.58584 15.4129 4.36904L13.9948 5.78715ZM14.4675 3.42363C14.7286 3.16256 14.7286 2.73929 14.4675 2.47822L13.5221 1.53281C13.261 1.27174 12.8378 1.27174 12.5767 1.53281L12.104 2.00552L13.9948 3.89634L14.4675 3.42363Z" />
+                                </svg>                                  
+                        </div>
+                        
+                        <div class="aside_adress_wrapper">
+                            <p  class="aside_adress">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                            <p><span class="aside_time">5–8 фев</span></p>                            
+                        </div>
+
+                        <div class="aside_return_info">
+                            <div class="return_info_pic"></div>
+                            <p class="return_text">Обратная доставка товаров на склад при отказе —
+                                <span class="tooltip">
+                                    бесплатно
+                                    <span class="tooltip_text">
+                                        Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно
+                                    </span>
+                                </p>    
+                        </div>
+
+                    </div>
+
+
+                    <div class="aside_container">
+                        <div class="aside_container_header">
+                            <h3>Оплата картой</h3>
+                                <svg class="edit_card" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1585 1.05991L14.9401 4.84154L4.72705 15.0546L0.735435 15.8529C0.385575 15.9229 0.0771149 15.6144 0.147087 15.2646L0.94541 11.273L11.1585 1.05991ZM2.17707 11.9321L11.1585 2.95072L13.0493 4.84154L4.06789 13.8229L1.70436 14.2956L2.17707 11.9321Z"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9948 5.78715L10.2132 2.00552L11.6313 0.587402C12.4145 -0.195801 13.6843 -0.195801 14.4675 0.587402L15.4129 1.53281C16.1961 2.31601 16.1961 3.58584 15.4129 4.36904L13.9948 5.78715ZM14.4675 3.42363C14.7286 3.16256 14.7286 2.73929 14.4675 2.47822L13.5221 1.53281C13.261 1.27174 12.8378 1.27174 12.5767 1.53281L12.104 2.00552L13.9948 3.89634L14.4675 3.42363Z" />
+                                </svg>                                  
+                        </div>
+                        
+                        <div class="aside_adress_wrapper">                            
+                            <div class="card_number_wrapper">
+                                <div class="card_pic mir"></div>
+                                <p class="card_number aside_card">1234 56•• •••• 1234</p>
+                            </div>                         
+                        </div>
+
+                        <div class="aside_return_info payment">
+                        
+                            <div class="check">
+                                <label  class="check_all">
+                                    <input type="checkbox" class="check_input confirm_payment">
+                                    <span class="check_box aside_checkbox"></span>
+                                    <span class="payment_check">Списать оплату сразу</span>
+                                </label>
+                            </div>
+
+
+                            <p class="return_text withdraw">Спишем оплату с карты при получении</p>
+                        </div>
+
+                    </div>
+
+                    <button class="order_button">Заказать</button>
+
+                    <div class="card_number_wrapper agree">
+                        <div class="agree_pic">
+                            <svg width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7657 4.68031L4.59586 13.4814L0.257324 8.66919L1.74276 7.32998L4.6174 10.5185L11.2999 3.31964L12.7657 4.68031Z" fill="black"/>
+                            </svg>                                
+                        </div>
+                        <p class="agree_rules">
+                            Соглашаюсь <span>с правилами пользования торговой площадкой</span>
+                             и <span>возврата</span>
+                        </p>
+                    </div> 
+                </div>    
+            </aside>
+            
+       
+        
+    </main>
+    
+
+    <footer>
+        <p>© 2022  ООО «Товары и точка»</p>
+    </footer>
+  
+
+    <div class="modal">
+        <div class="modal_wrapper">           
+        </div>
+    </div>
+
+
+    <script src="./scripts/index.js" defer></script>
+</body>
+</html>
