@@ -9,6 +9,8 @@
     --badge-bg-color: rgba(245, 81, 35, 1);
     --invalid-text-color: rgba(245, 81, 35, 1);
     --stock-text-color: rgba(255, 59, 48, 1);
+    --aside-bg-color: rgba(240, 236, 244, 1);
+
 
     --pencil-bg-color: rgb(203, 17, 171);
 
@@ -27,11 +29,14 @@
 
     /* fonts */
     --font-size-28: 2.8rem;
+    --font-size-26: 2.6rem;
     --font-size-24: 2.4rem;
     --font-size-23: 2.3rem;
+    --font-size-22: 2.2rem;
     --font-size-20: 2.0rem;
-    --font-size-16: 1.6rem;
     --font-size-18: 1.8rem;
+    --font-size-16: 1.6rem;
+    --font-size-14: 1.4rem;
     --font-size-13: 1.3rem;
     --font-size-12: 1.2rem;
 
@@ -39,15 +44,18 @@
     --line-heigth-32: 3.2rem;
     --line-heigth-28: 2.8rem;
     --line-heigth-24: 2.4rem;
+    --line-heigth-20: 2rem;
     --line-heigth-18: 1.8rem;
     --line-heigth-16: 1.6rem;
     --line-heigth-14: 1.4rem;
 
     /* paddings */
     --common-cart-padding: 2.4rem;
+    --cart-mobile-padding: 1.3rem;
 
     /* margins */
     --cart-margin-24: 2.4rem;
     --cart-margin-16: 1.6rem;
+    --cart-margin-14: 1.4rem;
 
 }

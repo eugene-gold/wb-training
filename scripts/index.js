@@ -38,7 +38,7 @@ const db = [
     {
         "id": "3",
         "img": "./assets/img/3.png",
-        "title": "Карандаши цветные Faber-Castell 'Замок', набор 24 цвета, заточенные, шестигранные, Faber-Castell",
+        "title": "Карандаши цветные Faber-Castell \"Замок\", набор 24 цвета, заточенные, шестигранные, Faber-Castell",
         "quantity": 2,
         "stock": 2,
         "price": 247,
@@ -535,7 +535,7 @@ const addSelectedItems = (products, element, incertPlace) => {
                     <div class="item_description">
                         <p class="item_character">
                             <span>${item.characteristics.color ? "Цвет: " : ''}</span><span>${item.characteristics.color ? item.characteristics.color : ''}</span>
-                            <span class="char">${item.characteristics.size ? "Размер: " : ''}</span><span>${item.characteristics.size ? item.characteristics.size : ''}</span>
+                            <span class="char">${item.characteristics.size ? "Размер: " : ''}</span><span class="item_size ${item.characteristics.size ? '' : 'hidden'}">${item.characteristics.size ? item.characteristics.size : ''}</span>
                         </p>                            
                         <p class="item_location">${item.store}</p>
                         <div class="item_owner">
@@ -800,7 +800,7 @@ const addNoStockElement = (id, quantity) => {
                     <div class="item_description">
                         <p class="item_character">
                             <span>${element.characteristics.color ? "Цвет: " : ''}</span><span>${element.characteristics.color ? element.characteristics.color : ''}</span>
-                            <span class="char">${element.characteristics.size ? "Размер: " : ''}</span><span>${element.characteristics.size ? element.characteristics.size : ''}</span>
+                            <span class="char">${element.characteristics.size ? "Размер: " : ''}</span><span class="item_size ${element.characteristics.size ? '' : 'hidden'}">${element.characteristics.size ? element.characteristics.size : ''}</span>
                         </p>                           
                     </div>
                 </div>
@@ -823,12 +823,7 @@ const addNoStockElement = (id, quantity) => {
                             </svg>                                        
                         </div>
                     </div>
-                </div>
-
-                <div class="item_price">                    
-                    
-                </div>
-
+                </div>           
             </div>
         </article>
         `)
@@ -1168,8 +1163,7 @@ const addDeliveryTime = (date) => {
     generateContainer(date)
     
 
-    const wrapper = document.querySelector('.delivery_data').lastElementChild
-    
+    const wrapper = document.querySelector('.delivery_data').lastElementChild.querySelector('.delivery_items_wrapper')
     db.forEach ((item) => {
         if(item.store_1) {
             wrapper.insertAdjacentHTML('beforeend', `
@@ -1181,8 +1175,8 @@ const addDeliveryTime = (date) => {
         }
 
         if(item.store_2) {
-            generateContainer(date+1)
-            const wrapper = document.querySelector('.delivery_data').lastElementChild
+            generateContainer(date+2)
+            const wrapper = document.querySelector('.delivery_data').lastElementChild.querySelector('.delivery_items_wrapper')
             wrapper.insertAdjacentHTML('beforeend', `
             <div class="delivery_item_pic"  data-item=${item.id}>
                 <img src="${item.img}">
@@ -1193,6 +1187,15 @@ const addDeliveryTime = (date) => {
     })    
 }
 
+
+//change input placeholder
+window.addEventListener('resize', changePlaceholder);
+
+changePlaceholder.call(window);
+
+function changePlaceholder() {
+    emailInput.setAttribute('placeholder', this.innerWidth >= 640 ? 'Почта' : 'Электронная почта');
+}
 
 
 createItemObject()

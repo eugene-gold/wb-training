@@ -1,13 +1,29 @@
 @font-face {
-  font-family: 'Segoe UI', sans-serif;
-  src: url('../fonts/Segoe/Segoe.ttf') format('truetype');
-  font-style: normal;
-  font-weight: normal;
+  font-family: "Segoe UI";
+  font-weight: 200;
+  src: local("Segoe UI Light");
 }
 
 @font-face {
-  font-family: 'Segoe UI', sans-serif;
-  src: url('../fonts/Segoe/Segoe_Bold.ttf') format('truetype');
-  font-style: normal;
-  font-weight: bold;
+  font-family: "Segoe UI";
+  font-weight: 300;
+  src: local("Segoe UI Semilight");
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  font-weight: 400;
+  src: local('Segoe UI');
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  font-weight: 600;
+  src: local("Segoe UI Semibold");
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  font-weight: 700;
+  src: local("Segoe UI Black");
 }
