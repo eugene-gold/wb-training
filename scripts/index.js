@@ -1,7 +1,8 @@
 const db = [
     {
         "id": "1",
-        "img": "./assets/img/1.png",
+        "img": "./assets/img/first212.jpg",
+        "img1": "./assets/img/first106.jpg",
         "title": "Футболка UZcotton мужская",
         "quantity": 1,
         "stock": 3,
@@ -19,7 +20,8 @@ const db = [
 
     {
         "id": "2",
-        "img": "./assets/img/2.png",
+        "img": "./assets/img/second212.jpg",
+        "img1": "./assets/img/second106.jpg",
         "title": "Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe",
         "quantity": 200,
         "stock": 210,
@@ -37,7 +39,8 @@ const db = [
     },
     {
         "id": "3",
-        "img": "./assets/img/3.png",
+        "img": "./assets/img/third214.jpg",
+        "img1": "./assets/img/third107.jpg",
         "title": "Карандаши цветные Faber-Castell \"Замок\", набор 24 цвета, заточенные, шестигранные, Faber-Castell",
         "quantity": 2,
         "stock": 2,
@@ -525,7 +528,11 @@ const addSelectedItems = (products, element, incertPlace) => {
                 </div>
 
                 <div class="item_pic">
-                    <img src=${item.img}>
+                    <img
+                        src=${item.img1}
+                        srcset="${item.img} 2x" 
+                        alt="${item.title}"
+                    >
                 </div>
 
                 <div class="item_info">
@@ -789,8 +796,12 @@ const addNoStockElement = (id, quantity) => {
         <article class="cart_item" data-id=${id}>
             <div class="item_main_info">             
 
-                <div class="item_pic">
-                    <img class="grey_image" src=${element.img}>
+                 <div class="item_pic">
+                    <img
+                    src=${element.img1}
+                    srcset="${element.img} 2x" 
+                    alt="${element.title}"
+                    >
                 </div>
 
                 <div class="item_info">
@@ -1168,7 +1179,11 @@ const addDeliveryTime = (date) => {
         if(item.store_1) {
             wrapper.insertAdjacentHTML('beforeend', `
             <div class="delivery_item_pic"  data-item=${item.id}>
-                <img src="${item.img}">
+                <img
+                    srcset="${item.img} 2x" 
+                    src=${item.img1}
+                    alt="${item.title}"
+                >
                 <span class="quantity_badge delivery_badge ${item.quantity > 1 ? '' : 'hidden'} ">${item.store_1}</span>
             </div>
         `)
@@ -1179,7 +1194,11 @@ const addDeliveryTime = (date) => {
             const wrapper = document.querySelector('.delivery_data').lastElementChild.querySelector('.delivery_items_wrapper')
             wrapper.insertAdjacentHTML('beforeend', `
             <div class="delivery_item_pic"  data-item=${item.id}>
-                <img src="${item.img}">
+                <img
+                    srcset="${item.img} 2x" 
+                    src=${item.img1}
+                    alt="${item.title}"
+                >
                 <span class="quantity_badge delivery_badge ${item.quantity > 1 ? '' : 'hidden'} ">${item.quantity - item.store_1}</span>
             </div>
         `)
